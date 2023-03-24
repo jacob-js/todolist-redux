@@ -12,7 +12,7 @@ function Hints() {
         <div>
             {HINTS.map((hint, index) => <div key={index} className="flex items-center justify-center gap-2">
                 <span className="text-red-500">*</span>
-                <span className='text-gray-500'>{hint}</span>
+                <span className="text-gray-500">{hint}</span>
             </div>)}
         </div>
     </div>
