@@ -18,7 +18,7 @@ function App() {
         <Hints />
         <div className="my-5 relative">
           <AddTodo setShowInput={setShowInput} showInput={showInput} />
-          {showInput && <TodoInput setShowInput={setShowInput} addTodo={() =>{}} />}
+          {showInput && <TodoInput setShowInput={setShowInput} />}
         </div>
         <TodosList todos={todos} />
       </Wrapper>

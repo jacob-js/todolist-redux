@@ -14,7 +14,7 @@ function TodoItem({title, done, id}) {
     }
 
   return (
-    <div className='flex items-center justify-between border-b border-gray-300 last:border-0 py-3'>
+    <div className="flex items-center justify-between border-b border-gray-300 last:border-0 py-3">
         <div className={`flex gap-5 items-center cursor-pointer ${done && !editing ? 'line-through opacity-60': ''}`}>
             <input type="checkbox" name="st" id={id} checked={done} onChange={() =>dispatch(toggleTodoStatus(id))} />
             {
