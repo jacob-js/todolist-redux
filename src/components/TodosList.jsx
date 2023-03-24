@@ -1,6 +1,8 @@
+import { useSelector } from 'react-redux';
 import TodoItem from './TodoItem'
 
-function TodosList({todos}) {
+function TodosList() {
+  const todos = useSelector((state) => state.todos);
 
   return (
     <div className="bg-white p-5 flex flex-col">

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
 import AddTodo from './components/AddTodo'
 import Hints from './components/Hints'
 import Title from './components/Title'
@@ -9,7 +8,6 @@ import Wrapper from './components/Wrapper'
 
 function App() {
   const [showInput, setShowInput] = useState(false)
-  const todos = useSelector((state) => state.todos);
 
   return (
     <div className="w-full min-h-screen bg-gray-200 flex flex-col items-center justify-center">
@@ -20,7 +18,7 @@ function App() {
           <AddTodo setShowInput={setShowInput} showInput={showInput} />
           {showInput && <TodoInput setShowInput={setShowInput} />}
         </div>
-        <TodosList todos={todos} />
+        <TodosList />
       </Wrapper>
     </div>
   )
